@@ -7,11 +7,8 @@
     <meta name="author" content="Douglas Rafael Esquinelato">
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
-   
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">   
+    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">    
     <title>Encontre seu Pet</title>
   </head> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
@@ -27,11 +24,11 @@
         </button>
         <div class="collapse navbar-collapse">
             <div class="navbar-nav">
-                <form class="form-inline my-2 my-lg-0" action="controles/cadDono.php" method="post">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Digite seu E-mail" >
-                    <input class="form-control mr-sm-2" type="search" placeholder="Digite sua Senha" >
-                    <button type="submit" class="nav-item btn btn-outline-light">Login</button>&nbsp
-                    <a class="nav-item btn btn-outline-light" href="index.php">Cadastre-se</a>
+                <form class="form-inline my-2 my-lg-0" action="controles/cadUser.php" method="post">
+                    <input class="form-control mr-sm-2" name="email"  placeholder="Digite seu E-mail">
+                    <input class="form-control mr-sm-2" name="senha"  placeholder="Digite sua Senha">                
+                    <input type="submit" class="nav-item btn btn-outline-light" value="Login" name="entrar">&nbsp
+                    <a class="nav-item btn btn-outline-light" href="cadastro.php">Cadastre-se</a>
                 </form> 
             </div>
         </div>
@@ -64,17 +61,13 @@
                 <div class="form-group col-md-4">
                     <label>TELEFONE</label>
                     <input type="text" class="form-control phone-ddd-mask" name="telefone"  placeholder="Ex.: (00) 0000-0000" maxlength="14" autocomplete="off">
-
-
-
                 </div>
             </div>
             <button type="submit" class="btn btn-success"  href="">Enviar cadastro</button>
         </form>
     </div>
-      <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
   <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
   <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
 </body>
 </html>     

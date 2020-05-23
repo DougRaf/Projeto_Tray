@@ -21,9 +21,8 @@
         href='../cadastro.php'</script>";
         exit;
     }
-
-    $encrypta = md5($confirma);    
-    $result_usuario = "INSERT INTO dono (nome, email, telefone, senha) VALUES ('$nome','$email','$telefone','$encrypta')";
+    
+    $result_usuario = "INSERT INTO dono (nome, email, telefone, senha) VALUES ('$nome','$email','$telefone','$senha')";
     $resultado_usuario = mysqli_query($link, $result_usuario);
 
 
