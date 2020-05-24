@@ -1,3 +1,13 @@
-#color-icon{
-    color:white;
+.background {
+    background: #4950578a;
+    border: solid 1px;
+    padding-right: 97px;
+}
+
+.parametros {
+    font-size: 13px;
+    border: solid 1px;
+}
+.btn-all {
+    padding-right: 175px;
 }

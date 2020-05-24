@@ -13,7 +13,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script> 
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
         <a class="navbar-brand" href="index.php">
@@ -32,29 +31,8 @@
                 </form> 
             </div>
         </div>
-    </nav>
+    </nav> 
 
-    <div class="input-group mb-3">
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile02">
-    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-  </div>
-  <div class="input-group-append">
-    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-  </div>
-</div>
-
-
-
-    <h1>Upload de Arquivos</h1>
-<?php if(isset($msg) && $msg != false) echo "<p> $msg </p>"; ?>
-<form action="controles/cadAnimal.php" method="POST" enctype="multipart/form-data">
-<div class="custom-file">
-    <input type="file" class="custom-file-input" name="arquivo" id="inputGroupFile02">
-    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Entre com a imagem</label>
-</div>
-   <input type="submit" value="Salvar">
-</form>
 
  
 
