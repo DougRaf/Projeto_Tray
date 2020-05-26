@@ -14,7 +14,6 @@
     $num = $sql->num_rows;
     $num_total = $link->query("SELECT * FROM animal")->num_rows;
     $num_paginas = ceil($num_total/$itens_por_pagina);
-
    
 ?>
 
@@ -33,13 +32,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script> 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
-        <a class="navbar-brand" href="index.php">
-            <img src="img/tele.png" width="250" id="tele"  class="d-inline-block align-top" alt=""> 
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" id="color-icon"></span>
-        </button>       
+    <nav class="navbar navbar-expand-lg navbar-danger bg-danger">          
         <a class="nav-item btn btn-outline-light" href="controles/sair.php">Sair</a>
     </nav>  
     <div class="container">

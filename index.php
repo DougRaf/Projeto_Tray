@@ -25,15 +25,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script> 
 <body>
     <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
-                  <div class="navbar-nav">
-                <form class="form-inline my-2 my-lg-0" action="controles/cadUser.php" method="post">
-                    <input class="form-control mr-sm-2" name="email"  placeholder="Digite seu E-mail" >
-                    <input type="password" class="form-control mr-sm-2" name="senha" maxlength="8" placeholder="Digite sua Senha" >                
-                    <input type="submit" class="nav-item btn btn-outline-light" value="Login" name="entrar">&nbsp
-                    <a class="nav-item btn btn-outline-light" href="cadastro.php">Cadastre-se</a>
-                </form> 
-            
-        </div>
+      <div class="navbar-nav">
+        <form class="form-inline my-2 my-lg-0" action="controles/cadUser.php" method="post">
+          <input class="form-control mr-sm-2" name="email"  placeholder="Digite seu E-mail" >
+          <input type="password" class="form-control mr-sm-2" name="senha" maxlength="8" placeholder="Digite sua Senha" >                
+          <input type="submit" class="nav-item btn btn-outline-light" value="Login" name="entrar">&nbsp
+          <a class="nav-item btn btn-outline-light" href="cadastro.php">Cadastre-se</a>
+        </form> 
+      </div>
     </nav> 
   <div class="container">
   <br>
