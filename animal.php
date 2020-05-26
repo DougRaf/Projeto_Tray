@@ -21,7 +21,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=960">
+    <meta name="viewport" content="width=1260">
     <meta name="description" content="Encontre seu animal">
     <meta name="author" content="Douglas Rafael Esquinelato">
     <link rel="stylesheet" href="style/style.css" type="text/css">

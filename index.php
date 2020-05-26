@@ -46,11 +46,12 @@
         <tr>
           <form method="post" action="encontrei.php" enctype="multipart/form-data">
             <td class="parametros"><img src="banner/<?php echo $row['foto']?>" style="width: 200px;" ></td>           
-            <td class="parametros"><p>NOME: <?php echo $row['nome']?></p>
-              <p> ESTADO: <?php echo $row['estado']?></p>
-              <p>CIDADE: <?php echo $row['cidade']?></p>
-              <p>INFORMAÇÕES EXTRAS: <?php echo $row['info_extra']?></p>
-              <p>SITUAÇÂO:<?php echo $row['status']?></p>
+            <td class="parametros">
+              <p class="parametro-banco">NOME: <?php echo $row['nome']?></p>
+              <p class="parametro-banco">ESTADO: <?php echo $row['estado']?></p>
+              <p class="parametro-banco">CIDADE: <?php echo $row['cidade']?></p>
+              <p class="parametro-banco">INFORMAÇÕES EXTRAS: <?php echo $row['info_extra']?></p>
+              <p class="parametro-banco">SITUAÇÂO:<?php echo $row['status']?></p>
             </td>
             <td class="parametros">            
               <h6> Caso tenha alguma informação click no botão abaixo!!!</h6>             
@@ -65,9 +66,8 @@
     </tbody>
     </table>
     <br>
-    <div class="paginacao">
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
+          <ul class="pagination  justify-content-center ">
             <li class="page-item">
               <a class="page-link" href="index.php?pagina=0"  aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
@@ -89,7 +89,6 @@
             </li>
           </ul>
         </nav>
-        </div>
-    </div>
+      </div>
 </body>
 </html>  

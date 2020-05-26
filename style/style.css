@@ -30,3 +30,8 @@
 .paginacao {   
     margin-left: 380px;
 }
+
+.parametro-banco {
+    color: RED;
+    margin-bottom: 2px;
+}
