@@ -1,23 +1,31 @@
 <?php
     require "config/conexao.php";
     $link = Conectar();
+
+    session_start();
+    if(!isset ($_SESSION['emailSession']) and !isset ($_SESSION['senhaSession'])){
+        header("Location: index.php"); 
+    }
+
+
     $itens_por_pagina = 10;
     $pagina = intval($_GET['pagina']);
     $sql = mysqli_query($link, "select * from `animal` LIMIT $itens_por_pagina OFFSET ".($pagina * $itens_por_pagina));  
     $num = $sql->num_rows;
     $num_total = $link->query("SELECT * FROM animal")->num_rows;
     $num_paginas = ceil($num_total/$itens_por_pagina);
+
+   
 ?>
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=960">
     <meta name="description" content="Encontre seu animal">
     <meta name="author" content="Douglas Rafael Esquinelato">
     <link rel="stylesheet" href="style/style.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
     <title>Encontre seu Pet</title>
   </head> 
@@ -32,7 +40,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" id="color-icon"></span>
         </button>       
-        <a class="nav-item btn btn-outline-light" href="index.php">Sair</a>
+        <a class="nav-item btn btn-outline-light" href="controles/sair.php">Sair</a>
     </nav>  
     <div class="container">
         <?php if(isset($msg) && $msg != false) echo "<p> $msg </p>"; ?>
@@ -113,24 +121,24 @@
         <br>
         <table>
       <thead>
-        <th class="background">ID</th>
-        <th class="background">NOME</th>
-        <th class="background">IDADE</th>
-        <th class="background">INFORMAÇÕES</th>
+        <th class="background-ID">ID</th>
+        <th class="background">NOME</th>       
         <th class="background">ESTADO</th>
         <th class="background">CIDADE</th>
         <th class="background">STATUS</th>
+        <th class="background">QUEM ENCONTROU</th>
+        <th class="background">Q.E/ CONTATO</th>
       </thead>
       <tbody>     
         <?php while($row = mysqli_fetch_assoc($sql)){?>
           <tr>
-            <td class="parametros"><?php echo $row['idAnimal']?></td>  
-            <td class="parametros"><?php echo $row['nome']?></td>
-            <td class="parametros"><?php echo $row['idade']?></td>
-            <td class="parametros"><?php echo $row['info_extra']?></td>
+            <td class="parametros-ID"><?php echo $row['idAnimal']?></td>  
+            <td class="parametros"><?php echo $row['nome']?></td>           
             <td class="parametros"><?php echo $row['estado']?></td>
             <td class="parametros"><?php echo $row['cidade']?></td>
             <td class="parametros"><?php echo $row['status']?></td>
+            <td class="parametros"><?php echo $row['nome_encontrei']?></td>
+            <td class="parametros"><?php echo $row['telefone_encontrei']?></td>
           </tr>
         <?php  } ?>  
       </tbody>

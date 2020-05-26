@@ -18,17 +18,24 @@
     if (isset($entrar))
     {
         $verifica = mysqli_query($link, "SELECT * FROM `dono` WHERE email = 
-        '$email' AND senha = '$senha'") or die("erro ao selecionar");   
+        '$email' AND senha = '$senha'") or die("erro ao selecionar"); 
+      
  
-        if (mysqli_num_rows($verifica)<=0){
+        if (mysqli_num_rows($verifica)==1){
+
+            session_start();
+            $_SESSION['emailSession']= $email;
+            $_SESSION['senhaSession']= $senha;
+            
+       
+            header("Location:../animal.php?pagina=0");  
+        
+        }else{        
+            
             echo"<script language='javascript' type='text/javascript'>
             alert('Login e/ou senha incorretos');window.location
             .href='../index.php';</script>";
             die();
-        
-        }else{
-            setcookie("login",$login);
-            header("Location:../animal.php?pagina=0");      
         }
     }
 ?>

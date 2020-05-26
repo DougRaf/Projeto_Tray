@@ -1,13 +1,32 @@
 .background {
     background: #4950578a;
     border: solid 1px;
-    padding-right: 97px;
+    padding-right: 113px;
+    font-size: 12px;
 }
 
 .parametros {
     font-size: 13px;
     border: solid 1px;
 }
+
 .btn-all {
     padding-right: 175px;
+}
+
+.background-ID {
+    background: #4950578a;
+    border: solid 1px;
+    padding-right: 15px;
+    font-size: 11px;
+}
+
+.parametros-ID {
+    font-size: 13px;
+    border: solid 1px;
+    text-align: -moz-center;
+}
+
+.paginacao {   
+    margin-left: 380px;
 }
